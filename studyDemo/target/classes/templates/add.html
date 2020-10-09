@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/saveI}" method="post">
+    <div class="form-group">
+        <label for="name">id:</label>
+        <input type="text" class="form.control" id="id" name="id" placeholder="请输入姓名" th:field="${user.id}">
+    </div>
+    <div class="form-group">
+        <label for="name">姓名:</label>
+        <input type="text" class="form.control" id="name" name="name" placeholder="请输入姓名" th:field="${user.name}">
+    </div>
+    <div class="form-group">
+        <label for="gender">性别:</label>
+        <input type="text" class="form.control" id="gender" name="gender" placeholder="请输入性别" th:field="${user.gender}">
+    </div>
+    <div class="form-group">
+        <label for="age">年龄:</label>
+        <input type="text" class="form.control" id="age" name="age" placeholder="请输入年龄" th:field="${user.age}">
+    </div>
+    <div class="form-group" style="text-align:center">
+        <a th:href="@{/saveI}">
+            <input class="btn btn-primary" type="submit" value="提交" />
+        </a>
+        <a href="add.html" th:href="@{/add}">
+            <input class="btn btn-default" type="reset" value="重置" />
+        </a>
+        <a href="list.html" th:href="@{/list}">
+            <input class="btn btn-default" type="button" value="返回" />
+        </a>
+    </div>
+</form>
+
+</body>
+</html>
